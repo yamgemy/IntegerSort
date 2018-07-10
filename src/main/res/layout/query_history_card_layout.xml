@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/qcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="10dp"
+        card_view:cardPreventCornerOverlap="false">
+
+        <RelativeLayout
+            android:id="@+id/qcard_bg"
+            android:background="@color/deep_dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/qcard_tv_integer_pool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:text="Pool:"
+                    android:padding="3dp"
+                    android:textStyle="bold"
+                    android:background="@color/Ivory"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="13"/>
+
+                <TextView
+                    android:layout_weight="87"
+                    android:id="@+id/qcard_tv_pool_display"
+                    android:textColor="@color/White"
+                    android:text="interger_pool example"
+                    android:paddingLeft="3dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@id/qcard_tv_integer_pool"
+                android:id="@+id/qcard_tv_max_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:padding="3dp"
+                    android:text="Max:"
+                    android:background="@color/Ivory"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="13"/>
+
+                <TextView
+                    android:id="@+id/qcard_tv_max_display"
+                    android:layout_weight="87"
+                    android:textColor="@color/White"
+                    android:text="interger_pool example"
+                    android:paddingLeft="3dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@id/qcard_tv_max_two"
+                android:id="@+id/qcard_tv_sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:padding="3dp"
+                    android:background="@color/Ivory"
+                    android:text="Sum:"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="13"/>
+
+                <TextView
+                    android:id="@+id/qcard_tv_sum_display"
+                    android:layout_weight="87"
+                    android:textColor="@color/White"
+                    android:text="interger_pool example"
+                    android:paddingLeft="3dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="10"
+    android:background="@color/DarkSlateBlue"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:id="@+id/input_scrollview"
+        android:layout_weight="7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:overScrollMode="always"
+        android:fillViewport="true">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/inputs_tv_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:flexWrap="wrap"
+            app:alignItems="flex_start"
+            app:alignContent="flex_start"
+            app:justifyContent="flex_start"
+            app:flexDirection="row">
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:weightSum="100"
+            android:id="@+id/InputNum_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:orientation="horizontal">
+
+            <com.cengalabs.flatui.views.FlatEditText
+                android:id="@+id/Inputs_edtxt"
+                android:layout_weight="85"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:inputType="numberSigned"
+                />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_weight="14"
+                android:gravity="center"
+                android:id="@+id/inputs_fab_enter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:fabSize="mini"
+                android:scaleType="center"
+                android:src="@drawable/baseline_add_white_18dp"
+                app:backgroundTint="@color/DodgerBlue"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_below="@+id/InputNum_container"
+            android:id="@+id/InputNum_warning"
+            android:layout_width="match_parent"
+            android:textColor="@color/Red"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:text="Input must be an integer"
+            android:visibility="invisible"/>
+
+        <com.cengalabs.flatui.views.FlatButton
+            android:layout_below="@+id/InputNum_warning"
+            android:id="@+id/input_cal_btn"
+            android:layout_marginTop="10dp"
+            android:text="Finish"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
+

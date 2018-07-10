@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="10"
+    android:background="@color/grass_darker"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:id="@+id/randomize_scrollview"
+        android:layout_weight="7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:overScrollMode="always"
+        android:fillViewport="true">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/randomtv_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:flexWrap="wrap"
+            app:alignItems="flex_start"
+            app:alignContent="flex_start"
+            app:justifyContent="flex_start"
+            app:flexDirection="row">
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="5dp">
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/randomize_fab_addnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            android:scaleType="center"
+            android:src="@drawable/baseline_add_white_18dp"
+android:layout_centerHorizontal="true"
+            app:backgroundTint="@color/MediumSeaGreen"
+            />
+
+        <com.cengalabs.flatui.views.FlatButton
+            android:layout_below="@+id/randomize_fab_addnum"
+            android:id="@+id/randomize_cal_btn"
+            android:layout_marginTop="10dp"
+            android:text="Finish"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
+

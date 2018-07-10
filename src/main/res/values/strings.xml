@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">IntegerSort</string>
+    <string name="action_clear">Clear log</string>
+</resources>
